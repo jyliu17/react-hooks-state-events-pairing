@@ -1,5 +1,7 @@
 import video from "../data/video.js";
-
+import CommentList from "./CommentList"
+import VideoDetail from "./VideoDetail"
+ 
 function App() {
   console.log("Here's your data:", video);
 
@@ -13,6 +15,15 @@ function App() {
         allowfullscreen
         title="Thinking in React"
       />
+     
+      <VideoDetail 
+        title={video.title} 
+        views={video.views} 
+        createdAt= {video.createdAt}
+        upvotes={video.upvotes}
+        downvotes={video.downvotes}
+        />
+        
     </div>
   );
 }
